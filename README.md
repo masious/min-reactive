@@ -1,3 +1,5 @@
+![alt min-reactive logo](./logo-type.svg)
+
 # min-reactive
 
 a minimalistic tool to avail reactivity to a webpage, without doing anything else, and without pulling off magic
@@ -7,6 +9,7 @@ so the goals of this project are:
 
 - it should only bring reactivity and nothing more.
 - it should be extremely transparent and simple on how it does that.
+- it should be extremely easy to fine control.
 - it should be flexible, extensible and composible.
 
 lets see how stuff shake out.
