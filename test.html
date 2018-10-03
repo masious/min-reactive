@@ -1,0 +1,26 @@
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="nunjucks.js"></script>
+  <script src="min-reactive.js"></script>
+</head>
+<body>
+    <span react-to="{guy: guy}">
+      Hellow {{ guy }}
+    </span>
+    <ul react-to="{people: people}">
+      {% for person in people %}
+      <li>{{ person.name }}</li>
+      {% endfor %}
+    </ul>
+    <input bind-to="guy" type="text" placeholder="guy's name ...">
+  </div>
+
+  <script>
+    guy = new State('Dude');
+    people = new State([
+      { name: 'Johan' },
+      { name: 'Asghar' },
+      { name: 'Javad' },
+    ]);
+  </script>
+</body>
