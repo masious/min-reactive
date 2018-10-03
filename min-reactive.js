@@ -101,13 +101,15 @@ $(document).ready(function() {
     var state = eval($el.attr('bind-to'));
 
     state.watch(function() {
-      $el.val(state.value);
+      if ($el.val() != state.value)
+        $el.val(state.value);
     });
 
     $el.val(state.value);
 
     $el.on('keyup keypress keydown blur focus change', function() {
-      state.set($el.val());
+      if ($el.val() != state.value)
+        state.set($el.val());
     });
   });
 });
